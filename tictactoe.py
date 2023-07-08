@@ -1,9 +1,5 @@
 def visual(game):
-    print(f"""
-       {game[1]}       {game[2]}       {game[3]}
-       {game[4]}       {game[5]}       {game[6]}
-       {game[7]}       {game[8]}       {game[9]}
-    """)
+    print(f"\n{game[1]}       {game[2]}       {game[3]}\n{game[4]}       {game[5]}       {game[6]}\n{game[7]}       {game[8]}       {game[9]}\n")
 
 def check_win(game,player):
     player_victory = ""
@@ -20,17 +16,13 @@ def check_win(game,player):
             return winner
 
 def check_win_conditions(player_victory,field_to_check):
-    if player_victory == field_to_check:
-        return True
-    return False
-
+    return player_victory == field_to_check
 
 def isNumber(input):
     if input <=0 or input >9 or type(input) != int:
         print("Ese número no me vale. Introduce un número del 1 al 9.")
         return False
-    else:
-        return True
+    return True
             
 def check_repeated(input,game):
     if game[input] == "X" or game[input] == "O":
